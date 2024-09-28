@@ -18,10 +18,12 @@ Route::get('/', function () {
 });
 
 use App\Http\Controllers\PostController;
+use Illuminate\Routing\Route as RoutingRoute;
 
-
+//記事一覧や詳細を表示するルート（GETリクエスト）
 Route::get('/', [PostController::class, 'index']);
-
 Route::get('posts/create', [PostController::class, 'create']);
-
 Route::get('/posts/{post}', [PostController::class, 'show']);
+
+//記事を作成するルート（POSTリクエスト）
+Route::post('/posts', [PostController::class, 'store']);
