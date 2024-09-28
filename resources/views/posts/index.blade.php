@@ -18,6 +18,7 @@
     </header>
 
     <main>
+        <a href="/posts/create">create</a>
         <div class="posts">
             @foreach ($posts as $post)
                 <div class="post">
