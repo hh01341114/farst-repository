@@ -30,3 +30,6 @@ Route::put('/posts/{post}', [PostController::class, 'update']);
 
 //記事を作成するルート（POSTリクエスト）
 Route::post('/posts', [PostController::class, 'store']);
+
+//記事を削除するルート（DELETリクエスト）
+Route::delete('/posts/{post}', [PostController::class, 'delete']);
